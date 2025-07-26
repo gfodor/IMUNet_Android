@@ -1,0 +1,158 @@
+--------- beginning of main
+07-26 09:10:06.368   981   981 D AOC     : F1:Irregular FIQ at 176510: delta 4158 (lb: 4056, ub: 4136, FIQ delta: 0)
+07-26 09:10:06.369   981   981 D AOC     : F1:Irregular FIQ at 176511: delta 4049 (lb: 4056, ub: 4136, FIQ delta: 0)
+--------- beginning of system
+07-26 09:10:06.714  1514  3194 I ActivityTaskManager: START u0 {cmp=edu.usf.imunet/.MainActivity} from uid 10227
+07-26 09:10:06.721   709  2336 D audio_hw_output_stream: update stream 5 active 1 gain 0.061406
+07-26 09:10:06.726  1514  3125 W ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (9949163)
+07-26 09:10:06.755 11761 11761 I Rajawali: Rajawali | Anchor Steam | v1.0 
+07-26 09:10:06.759 11761 11761 E libEGL  : call to OpenGL ES API with no current context (logged once per thread)
+07-26 09:10:06.794 11761 11761 I tflite  : Created TensorFlow Lite delegate for select TF ops.
+07-26 09:10:06.795 11761 11761 D libEGL  : loaded /vendor/lib64/egl/libGLES_mali.so
+07-26 09:10:06.807 11761 11761 D mali_cmarp_predictor: checking cmar_predictor for edu.usf.imunet
+07-26 09:10:06.810  1514  3194 W ServiceManager: Permission failure: android.permission.HIGH_SAMPLING_RATE_SENSORS from uid=10227 pid=11761
+07-26 09:10:06.816  1514  3194 W ServiceManager: Permission failure: android.permission.HIGH_SAMPLING_RATE_SENSORS from uid=10227 pid=11761
+07-26 09:10:06.816 11761 11761 D CompatibilityChangeReporter: Compat change id reported: 136069189; UID 10227; state: ENABLED
+07-26 09:10:06.816 11761 11761 D AndroidRuntime: Shutting down VM
+--------- beginning of crash
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: FATAL EXCEPTION: main
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: Process: edu.usf.imunet, PID: 11761
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: java.lang.RuntimeException: Unable to resume activity {edu.usf.imunet/edu.usf.imunet.MainActivity}: java.lang.SecurityException: To use the sampling rate of 0 microseconds, app needs to declare the normal permission HIGH_SAMPLING_RATE_SENSORS.
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:4824)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.ActivityThread.handleResumeActivity(ActivityThread.java:4857)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.servertransaction.ResumeActivityItem.execute(ResumeActivityItem.java:54)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.servertransaction.ActivityTransactionItem.execute(ActivityTransactionItem.java:45)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleState(TransactionExecutor.java:176)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:97)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2253)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:201)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:288)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7870)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1003)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: Caused by: java.lang.SecurityException: To use the sampling rate of 0 microseconds, app needs to declare the normal permission HIGH_SAMPLING_RATE_SENSORS.
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.hardware.SystemSensorManager$BaseEventQueue.enableSensor(SystemSensorManager.java:792)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.hardware.SystemSensorManager$BaseEventQueue.addSensor(SystemSensorManager.java:712)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.hardware.SystemSensorManager.registerListenerImpl(SystemSensorManager.java:209)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.hardware.SensorManager.registerListener(SensorManager.java:832)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.hardware.SensorManager.registerListener(SensorManager.java:739)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at edu.usf.imunet.MainActivity.onResume(MainActivity.java:297)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnResume(Instrumentation.java:1488)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.Activity.performResume(Activity.java:8194)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	at android.app.ActivityThread.performResumeActivity(ActivityThread.java:4814)
+07-26 09:10:06.818 11761 11761 E AndroidRuntime: 	... 13 more
+07-26 09:10:06.821  1514 11832 I DropBoxManagerService: add tag=data_app_crash isTagEnabled=true flags=0x2
+07-26 09:10:06.821  1514  3194 W ActivityTaskManager:   Force finishing activity edu.usf.imunet/.MainActivity
+07-26 09:10:06.826   691   696 D statsd  : StateTracker did not find state value for query key (386)0x10000->10227[I] 
+07-26 09:10:06.827   691   696 W statsd  : StateTracker not found for state atom 386
+07-26 09:10:06.828  1514  3194 W ActivityTaskManager:   Force finishing activity edu.usf.imunet/.SelectActivity
+07-26 09:10:06.829   691   696 D statsd  : StateTracker did not find state value for query key (386)0x10000->10197[I] 
+07-26 09:10:06.829   691   696 W statsd  : StateTracker not found for state atom 386
+07-26 09:10:06.831 11761 11761 I Process : Sending signal. PID: 11761 SIG: 9
+07-26 09:10:06.831  1514  1548 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.DROPBOX_ENTRY_ADDED flg=0x10 (has extras) } to com.google.android.gms/.stats.service.DropBoxEntryAddedReceiver
+07-26 09:10:06.848  6638  6638 I bqxr    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+07-26 09:10:06.848  6638  6638 I bqxr    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+07-26 09:10:06.850  1514  2682 I ActivityManager: Process edu.usf.imunet (pid 11761) has died: fg  TOP 
+07-26 09:10:06.850  1514  1952 I WindowManager: WIN DEATH: Window{3dbeda6 u0 edu.usf.imunet/edu.usf.imunet.SelectActivity}
+07-26 09:10:06.850  1514  1952 W InputManager-JNI: Input channel object '3dbeda6 edu.usf.imunet/edu.usf.imunet.SelectActivity (client)' was disposed without first being removed with the input manager!
+07-26 09:10:06.850   547   547 W powerhal-libperfmgr: sched_setattr failed for thread 11799, err=3
+07-26 09:10:06.850   547   547 W powerhal-libperfmgr: sched_setattr failed for thread 11800, err=3
+07-26 09:10:06.850   547   547 W powerhal-libperfmgr: sched_setattr failed for thread 11761, err=3
+07-26 09:10:06.850   547   547 W powerhal-libperfmgr: sched_setattr failed for thread 11786, err=3
+07-26 09:10:06.850   547   547 W libprocessgroup: Failed to apply NoResetUclampGrp task profile: No such process
+07-26 09:10:06.850   693   693 I Zygote  : Process 11761 exited due to signal 9 (Killed)
+07-26 09:10:06.850   547   547 W libprocessgroup: Failed to apply NoResetUclampGrp task profile: No such process
+07-26 09:10:06.850   547   547 W libprocessgroup: Failed to apply NoResetUclampGrp task profile: No such process
+07-26 09:10:06.850   547   547 W libprocessgroup: Failed to apply NoResetUclampGrp task profile: No such process
+07-26 09:10:06.850  1514  1550 I libprocessgroup: Successfully killed process cgroup uid 10227 pid 11761 in 0ms
+07-26 09:10:06.857   489   489 E ClientCache: failed to get buffer, invalid process token
+07-26 09:10:06.863   709  2336 D audio_hw_output_stream: update stream 5 active 0 gain 0.000000
+07-26 09:10:06.863  6638  6638 I brec    : onStart
+07-26 09:10:06.866  2279  2313 D QuickstepModelDelegate: notifyAppTargetEvent action=1 launchLocation=
+07-26 09:10:06.867  1514  1542 W WindowManager: Failed to deliver inset state change to w=Window{3dbeda6 u0 edu.usf.imunet/edu.usf.imunet.SelectActivity EXITING}
+07-26 09:10:06.867  1514  1542 W WindowManager: android.os.DeadObjectException
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at android.os.BinderProxy.transactNative(Native Method)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at android.os.BinderProxy.transact(BinderProxy.java:571)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at android.view.IWindow$Stub$Proxy.insetsControlChanged(IWindow.java:687)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.wm.WindowState.notifyInsetsControlChanged(WindowState.java:4037)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.wm.InsetsStateController.lambda$notifyPendingInsetsControlChanged$6$InsetsStateController(InsetsStateController.java:552)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.wm.InsetsStateController$$ExternalSyntheticLambda1.run(Unknown Source:2)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.wm.WindowAnimator.executeAfterPrepareSurfacesRunnables(WindowAnimator.java:345)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.wm.RootWindowContainer.performSurfacePlacementNoTrace(RootWindowContainer.java:884)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.wm.RootWindowContainer.performSurfacePlacement(RootWindowContainer.java:822)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementLoop(WindowSurfacePlacer.java:177)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.wm.WindowSurfacePlacer.performSurfacePlacement(WindowSurfacePlacer.java:126)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.wm.WindowSurfacePlacer.performSurfacePlacement(WindowSurfacePlacer.java:115)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.wm.WindowSurfacePlacer$Traverser.run(WindowSurfacePlacer.java:57)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at android.os.Handler.handleCallback(Handler.java:938)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at android.os.Looper.loopOnce(Looper.java:201)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at android.os.Looper.loop(Looper.java:288)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+07-26 09:10:06.867  1514  1542 W WindowManager: 	at com.android.server.ServiceThread.run(ServiceThread.java:44)
+07-26 09:10:06.869  6638  6638 I bovg    : (REDACTED) [%s] onStart()
+07-26 09:10:06.870  6638  6638 I boxl    : Reloading theme data
+07-26 09:10:06.871  6638  6638 I bovg    : silent_refresh state: Idle/Default
+07-26 09:10:06.872  6638  6638 I brec    : onResume
+07-26 09:10:06.873  6638  6863 I OpenGLRenderer: Davey! duration=51686ms; Flags=1, FrameTimelineVsyncId=165488, IntendedVsync=9900631961629, Vsync=9900631961629, InputEventId=1542017232, HandleInputStart=9900632365550, AnimationStart=9900632366282, PerformTraversalsStart=9900632366974, DrawStart=9900640535024, FrameDeadline=9900659672740, FrameInterval=9900632362783, FrameStartTime=11111111, SyncQueued=9900641091299, SyncStart=9900641130443, IssueDrawCommandsStart=9900641418529, SwapBuffers=9900645408722, FrameCompleted=9952318379410, DequeueBufferDuration=869181, QueueBufferDuration=2073161, GpuCompleted=9952318379410, SwapBuffersCompleted=9900647650869, DisplayPresentTime=0, 
+07-26 09:10:06.881  1514  1542 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=95 attached=false
+07-26 09:10:06.881  1514  1542 W ActivityTaskManager: Can't find TaskDisplayArea to determine support for multi window. Task id=95 attached=false
+07-26 09:10:06.881  3336  3401 I AiAiEcho: Predicting[6]: { Feature:1, creation:2025-07-26T15:00:00Z, expiry:2025-07-26T16:00:00Z, isExpired: true}, { Feature:1, creation:2025-07-26T16:00:00Z, expiry:2025-07-26T17:00:00Z, isExpired: false}, { Feature:1, creation:2025-07-26T17:00:00Z, expiry:2025-07-26T18:00:00Z, isExpired: true}, { Feature:1, creation:2025-07-26T18:00:00Z, expiry:2025-07-26T19:00:00Z, isExpired: true}, { Feature:1, creation:2025-07-26T19:00:00Z, expiry:2025-07-26T20:00:00Z, isExpired: true}, { Feature:1, creation:2025-07-26T20:00:00Z, expiry:2025-07-26T21:00:00Z, isExpired: true}
+07-26 09:10:06.882  3336  3401 I AiAiEcho: EchoTargets: Feature:1
+07-26 09:10:06.882  3336  3401 I AiAiEcho: Filtered by AiAi flag check: 
+07-26 09:10:06.882  1514  1541 W ActivityManager: setHasOverlayUi called on unknown pid: 11761
+07-26 09:10:06.882  3336  3401 I AiAiEcho: Ranked targets strategy: WEIGHTED, count: 1, ranking metadata: { cardId: WEATHER-569377244, card type: 1, update time: 2025-07-26T16:00:00Z, expiration time: 2025-07-26T17:00:00Z, ranking metadata: RankingMetaData(urgency=0.975, priority=0.3, recency=1.0, rankScore=0.29250002, importantTimePoints=# npp@7bca4) }
+07-26 09:10:06.883  3336  3401 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 1 (types=[1])
+07-26 09:10:06.885  2279  2279 W BcSmartspaceCard: No title view to update
+07-26 09:10:06.890   489   489 E BpTransactionCompletedListener: Failed to transact (-32)
+07-26 09:10:06.900 26741 26741 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3267 
+07-26 09:10:06.901 26741 26741 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2097 repeatCheckTimes = 0, locked = false
+07-26 09:10:06.902 26741 26741 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1889 onStartInput(EditorInfo{EditorInfo{packageName=com.google.android.apps.nexuslauncher, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=2131361912, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+07-26 09:10:06.903 26741 26741 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2097 repeatCheckTimes = 1, locked = false
+07-26 09:10:06.918  1821  1832 W ndroid.systemu: Reducing the number of considered missed Gc histogram windows from 302 to 100
+07-26 09:10:06.963  1821  1835 W System  : A resource failed to call close. 
+07-26 09:10:06.965  1821  1835 W System  : A resource failed to call close. 
+07-26 09:10:06.965  1821  1835 W System  : A resource failed to call release. 
+07-26 09:10:06.966  1821  1835 W System  : A resource failed to call close. 
+07-26 09:10:06.967  1821  1835 W System  : A resource failed to call release. 
+07-26 09:10:06.969  1821  1835 W System  : A resource failed to call close. 
+07-26 09:10:06.969  1821  1835 W System  : A resource failed to call release. 
+07-26 09:10:06.970  1821  1835 W System  : A resource failed to call close. 
+07-26 09:10:06.970  1821  1835 W System  : A resource failed to call release. 
+07-26 09:10:06.972  1821  1835 W System  : A resource failed to call close. 
+07-26 09:10:06.972  1821  1835 W System  : A resource failed to call release. 
+07-26 09:10:06.974  1821  1835 W System  : A resource failed to call close. 
+07-26 09:10:06.974  1821  1835 W System  : A resource failed to call release. 
+07-26 09:10:06.977  1821  1835 W System  : A resource failed to call close. 
+07-26 09:10:06.977  1821  1835 W System  : A resource failed to call close. 
+07-26 09:10:06.977  1821  1835 W System  : A resource failed to call release. 
+07-26 09:10:06.980  1821  1835 W System  : A resource failed to call release. 
+07-26 09:10:06.980  1821  1835 W System  : A resource failed to call release. 
+07-26 09:10:07.002   981   981 D AOC     : A3:MSG: lsm6dsr_device.cc, 760: USF: Lsm6dsrDevice: Sensor 4: Enabled 0, odr_index 0.
+07-26 09:10:07.002   981   981 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 746: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/208/13/26 WM: 11 Intr: 28.
+07-26 09:10:07.002   981   981 D AOC     : A3:MSG: lsm6dsr_device.cc, 667: USF: Lsm6dsrDevice: Fifo was disabled for 616455ns.
+07-26 09:10:07.002   981   981 D AOC     : A3:MSG: usf_sensor.cc, 1313: USF: Received start sampling request for LSM6DSR Motion Detect.
+07-26 09:10:07.003   981   981 D AOC     : A3:MSG: lsm6dsr_device.cc, 760: USF: Lsm6dsrDevice: Sensor 3: Enabled 1, odr_index 1.
+07-26 09:10:07.003   981   981 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 746: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/208/13/26 WM: 11 Intr: 28.
+07-26 09:10:07.004   981   981 D AOC     : A3:MSG: lsm6dsr_device.cc, 667: USF: Lsm6dsrDevice: Fifo was disabled for 750488ns.
+07-26 09:10:07.005   981   981 D AOC     : A3:MSG: usf_sensor.cc, 1320: USF: Received stop sampling request for LSM6DSR Stationary Detect.
+07-26 09:10:07.005   981   981 D AOC     : A3:ERR: usf_sensor.cc, 1780: USF: Sampling configuration 22743 not found.
+07-26 09:10:07.024   981   981 D AOC     : A3:MSG: usf_sensor.cc, 1828: USF: Received reconfig sampling request for LSM6DSR Gyroscope.
+07-26 09:10:07.024   981   981 D AOC     : A3:MSG: lsm6dsr_device.cc, 760: USF: Lsm6dsrDevice: Sensor 1: Enabled 1, odr_index 3.
+07-26 09:10:07.025   981   981 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 746: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/52/13/6 WM: 4 Intr: 31.
+07-26 09:10:07.025   981   981 D AOC     : A3:MSG: lsm6dsr_device.cc, 667: USF: Lsm6dsrDevice: Fifo was disabled for 883301ns.
+07-26 09:10:07.027   981   981 D AOC     : A3:MSG: usf_sensor.cc, 1828: USF: Received reconfig sampling request for MMC56X3X Magnetometer.
+07-26 09:10:07.027   981   981 D AOC     : A3:MSG: mmc56x3x_device.cc, 426: USF: MMC56X3X0: Mag disables measuring.
+07-26 09:10:07.047   981   981 D AOC     : A3:MSG: mmc56x3x_device.cc, 394: USF: MMC56X3X0: mmc56x3x_enable_measure odr = 10.
+07-26 09:10:07.208   981   981 D AOC     : A3:MSG: lsm6dsr_device.cc, 760: USF: Lsm6dsrDevice: Sensor 3: Enabled 0, odr_index 0.
+07-26 09:10:07.208   981   981 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 746: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/52/13/6 WM: 4 Intr: 31.
+07-26 09:10:07.208   981   981 D AOC     : A3:MSG: lsm6dsr_device.cc, 667: USF: Lsm6dsrDevice: Fifo was disabled for 985108ns.
+07-26 09:10:07.210   981   981 D AOC     : A3:MSG: usf_sensor.cc, 1313: USF: Received start sampling request for LSM6DSR Stationary Detect.
+07-26 09:10:07.210   981   981 D AOC     : A3:MSG: lsm6dsr_device.cc, 760: USF: Lsm6dsrDevice: Sensor 4: Enabled 1, odr_index 1.
+07-26 09:10:07.211   981   981 D AOC     : A3:MSG: lsm6dsr_fifo.cc, 746: USF: Lsm6dsrFifo: ODR: XL/G/T/TS: 52/52/13/6 WM: 4 Intr: 31.
+07-26 09:10:07.212   981   981 D AOC     : A3:MSG: lsm6dsr_device.cc, 667: USF: Lsm6dsrDevice: Fifo was disabled for 839355ns.
+07-26 09:10:07.212   981   981 D AOC     : A3:MSG: usf_sensor.cc, 1320: USF: Received stop sampling request for LSM6DSR Motion Detect.
+07-26 09:10:07.212   981   981 D AOC     : A3:ERR: usf_sensor.cc, 1780: USF: Sampling configuration 22765 not found.
+07-26 09:10:07.327  1514  1541 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{687d8e u0 edu.usf.imunet/.MainActivity t-1 f}}
